@@ -1,0 +1,13 @@
+<template>
+  <div>
+    <div>flag</div>
+    <div>
+      <h1>Title</h1>
+      <div>
+        <p>Population:</p>
+        <p>Region:</p>
+        <p>Caítal:</p>
+      </div>
+    </div>
+  </div>
+</template>
