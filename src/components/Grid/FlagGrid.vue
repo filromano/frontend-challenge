@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="flag-grid">
     <GridItem v-for="country in countries"
               :key="country.name"
               :flag = "country.flag"
+              :name = "country.name"
               :population = "country.population"
               :region = "country.region"
               :capital = "country.capital"/>

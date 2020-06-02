@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Navbar/>
-    <FlagGrid/>
+    <Navbar class="container"/>
+    <FlagGrid class="container"/>
   </div>
 </template>
 

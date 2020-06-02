@@ -1,0 +1,54 @@
+@import './variables.scss';
+
+#app{
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: $fontFamily;
+}
+
+.container{
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: $breakpointDesktop;
+  height: auto;
+}
+
+.flag-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: $veryLightGray;
+}
+
+.grid-item{
+  display: block;
+  flex-basis: 20%;
+  background-color: #FFF;
+  margin: 20px;
+}
+
+.flag-image{
+  display: block;
+  width: 100%;
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+
+.grid-item-desc{
+  display: block;
+  font-size: $homeFontSize;
+  font-weight: 300;
+  padding: 20px;
+  h1{
+    font-size: 20px;
+    font-weight: 800;
+  }
+  span{
+    font-weight: 600;
+  }
+}

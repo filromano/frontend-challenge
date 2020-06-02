@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <div>
+  <div class="grid-item">
+    <div class="flag-image">
       <img :src="flag" alt="">
     </div>
-    <div>
-      <h1>Title</h1>
-      <div>
-        <p>Population: {{ population }}</p>
-        <p>Region {{ region }}:</p>
-        <p>Capital: {{ capital }}</p>
-      </div>
+    <div class="grid-item-desc">
+      <h1>{{ name }}</h1>
+      <p><span>Population:</span> {{ population }}</p>
+      <p><span>Region:</span> {{ region }}</p>
+      <p><span>Capital:</span> {{ capital }}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['flag', 'population', 'region', 'capital'],
+  props: ['flag', 'name', 'population', 'region', 'capital'],
 };
 </script>
