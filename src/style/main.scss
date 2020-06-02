@@ -9,16 +9,32 @@
 
 .container{
   display: block;
+  box-sizing: border-box;
   margin: auto;
   width: 100%;
   max-width: $breakpointDesktop;
   height: auto;
+  padding: 0 40px;
+}
+
+h1{
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.topbar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.mode{
+  font-weight: 600;
 }
 
 .flag-grid{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   background-color: $veryLightGray;
 }
@@ -28,6 +44,15 @@
   flex-basis: 20%;
   background-color: #FFF;
   margin: 20px;
+  -webkit-box-shadow: 0px 0px 20px -10px rgba(77,75,77,1);
+  -moz-box-shadow: 0px 0px 20px -10px rgba(77,75,77,1);
+  box-shadow: 0px 0px 20px -10px rgba(77,75,77,1);
+  &:nth-child(4n+0), &:nth-last-child(n){
+    margin-right: 0px !important;
+  }
+  &:nth-child(4n+1){
+    margin-left: 0 !important;
+  }
 }
 
 .flag-image{
@@ -44,7 +69,7 @@
   font-size: $homeFontSize;
   font-weight: 300;
   padding: 20px;
-  h1{
+  .title{
     font-size: 20px;
     font-weight: 800;
   }

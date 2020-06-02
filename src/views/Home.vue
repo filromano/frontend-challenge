@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar class="container"/>
+    <Topbar class="container"/>
     <FlagGrid class="container"/>
   </div>
 </template>
@@ -8,12 +8,12 @@
 <script>
 import { mapActions } from 'vuex';
 
-import Navbar from '../components/Navbar.vue';
+import Topbar from '../components/Topbar.vue';
 import FlagGrid from '../components/Grid/FlagGrid.vue';
 
 export default {
   components: {
-    Navbar,
+    Topbar,
     FlagGrid,
   },
   methods: {

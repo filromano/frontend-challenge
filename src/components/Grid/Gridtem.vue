@@ -4,7 +4,7 @@
       <img :src="flag" alt="">
     </div>
     <div class="grid-item-desc">
-      <h1>{{ name }}</h1>
+      <p class="title">{{ name }}</p>
       <p><span>Population:</span> {{ population }}</p>
       <p><span>Region:</span> {{ region }}</p>
       <p><span>Capital:</span> {{ capital }}</p>
