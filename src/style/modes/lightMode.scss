@@ -1,0 +1,10 @@
+.light-mode{
+  color: $lightModeTxt;
+  background-color: $lightModeBackground;
+  .topbar{
+    background-color: $darkModeTxt;
+  }
+  .grid-item{
+    background-color: $darkModeTxt;
+  }
+}

@@ -1,0 +1,10 @@
+.dark-mode{
+  color: $darkModeTxt;
+  background-color: $darkModeBackground;
+  .topbar{
+    background-color: $darkModeElements;
+  }
+  .grid-item{
+    background-color: $darkModeElements;
+  }
+}

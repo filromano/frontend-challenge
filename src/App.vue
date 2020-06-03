@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="light-mode">
-      <Topbar class="container"/>
+      <Topbar/>
       <router-view/>
     </div>
   </div>
@@ -18,5 +18,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import './style/main.scss';
+  @import './style/style.scss';
 </style>
