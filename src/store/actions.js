@@ -20,8 +20,31 @@ const getSelectedCountry = ({ state, commit }, value) => {
   });
 };
 
+const getBorderCountries = ({ commit, state }) => {
+  const borders = state.selectedCountry.borders.map((element) => {
+    let border = {};
+    state.countries.forEach((el) => {
+      if (element === el.alpha3Code) {
+        border = {
+          name: el.name,
+          alpha2Code: el.alpha2Code,
+        };
+      }
+    });
+    return border;
+  });
+  commit('updateBorderCountries', borders);
+};
+
+const formatInfo = ({ commit }) => {
+  commit('formatCurrencies');
+  commit('formatLanguages');
+};
+
 export default {
   getCountries,
   changeMode,
   getSelectedCountry,
+  getBorderCountries,
+  formatInfo,
 };
