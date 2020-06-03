@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-item">
+  <div class="grid-item" @click="goToCountry">
     <div class="flag-image">
       <img :src="flag" alt="">
     </div>
@@ -13,7 +13,15 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
-  props: ['flag', 'name', 'population', 'region', 'capital'],
+  props: ['flag', 'name', 'population', 'region', 'capital', 'alphaCode2'],
+  methods: {
+    ...mapActions(['getSelectedCountry']),
+    goToCountry() {
+      this.$router.push({ name: 'Details', params: { alphaCode2: this.alphaCode2 } });
+    },
+  },
 };
 </script>

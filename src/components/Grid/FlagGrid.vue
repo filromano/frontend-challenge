@@ -6,7 +6,9 @@
               :name = "country.name"
               :population = "country.population"
               :region = "country.region"
-              :capital = "country.capital"/>
+              :capital = "country.capital"
+              :alphaCode2 = "country.alpha2Code"
+              />
   </div>
 </template>
 

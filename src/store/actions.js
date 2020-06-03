@@ -12,7 +12,16 @@ const changeMode = ({ commit }, value) => {
   commit('updateMode', value);
 };
 
+const getSelectedCountry = ({ state, commit }, value) => {
+  state.countries.forEach((element) => {
+    if (element.alpha2Code === value) {
+      commit('updateSelectedCountry', element);
+    }
+  });
+};
+
 export default {
   getCountries,
   changeMode,
+  getSelectedCountry,
 };
