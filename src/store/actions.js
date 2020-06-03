@@ -8,6 +8,11 @@ const getCountries = ({ commit }) => {
     });
 };
 
+const changeMode = ({ commit }, value) => {
+  commit('updateMode', value);
+};
+
 export default {
   getCountries,
+  changeMode,
 };
