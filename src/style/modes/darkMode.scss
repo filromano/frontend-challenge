@@ -1,10 +1,38 @@
 .dark-mode{
   color: $darkModeTxt;
+  input{
+    background-color: $darkModeElements;
+    color: $darkModeTxt;
+  }
+  button{
+    background-color: $darkModeElements;
+    color: $darkModeTxt;
+  }
+  ::placeholder{
+    color: $darkModeTxt;
+  }
+  ion-icon{
+    color: white;
+  }
   background-color: $darkModeBackground;
   .topbar{
     background-color: $darkModeElements;
   }
   .grid-item{
     background-color: $darkModeElements;
+  }
+  .selected{
+    background-color: $darkModeElements;
+    color: $darkModeTxt;
+    &::after{
+      border-color: $darkModeTxt transparent transparent transparent;
+    }
+  }
+  .items{
+    background-color: $darkModeElements;
+    color: $darkModeTxt;
+  }
+  .item:hover{
+    background-color: $darkModeBackground;
   }
 }

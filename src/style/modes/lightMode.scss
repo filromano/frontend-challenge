@@ -1,10 +1,26 @@
 .light-mode{
   color: $lightModeTxt;
   background-color: $lightModeBackground;
+  button{
+    background-color: $darkModeTxt;
+  }
   .topbar{
     background-color: $darkModeTxt;
   }
   .grid-item{
     background-color: $darkModeTxt;
+  }
+  .selected{
+    background-color: $darkModeTxt;
+    &::after{
+      border-color: #000 transparent transparent transparent;
+    }
+  }
+  .items{
+    background-color: $darkModeTxt;
+    color: $lightModeTxt;
+  }
+  .item:hover{
+    background-color: $lightModeBackground;
   }
 }

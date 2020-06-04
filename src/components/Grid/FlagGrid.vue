@@ -5,7 +5,7 @@
         <input type="text"
                v-model="search"
                placeholder="Search for a country...">
-               <ion-icon name="search-outline"></ion-icon>
+               <ion-icon name="search"></ion-icon>
       </div>
       <div>
         <SelectCustom :options="regions" />

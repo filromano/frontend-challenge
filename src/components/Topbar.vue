@@ -7,7 +7,8 @@
             <h1>Where in the world</h1>
           </div>
           <div class="switch-mode" @click="switchMode">
-            <ion-icon name="moon-outline"></ion-icon>
+            <ion-icon name="moon" v-if="darkMode"></ion-icon>
+            <ion-icon name="moon-outline" v-else></ion-icon>
             <p class="mode">Dark Mode</p>
           </div>
         </div>
