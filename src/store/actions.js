@@ -11,7 +11,7 @@ const getCountries = ({ commit, dispatch }, value) => {
       });
       commit('updateRegions', regions);
       if (value) {
-        dispatch('getSelectedCountry', value);
+        dispatch('getSelectedCountryInfo', value);
       }
     });
 };
@@ -53,6 +53,16 @@ const getSelectedRegion = ({ commit }, value) => {
   commit('updateSelectedRegion', value);
 };
 
+const resetInfo = ({ commit }) => {
+  commit('resetStateInfo');
+};
+
+const getSelectedCountryInfo = async ({ dispatch }, value) => {
+  await dispatch('getSelectedCountry', value);
+  dispatch('formatInfo');
+  dispatch('getBorderCountries');
+};
+
 export default {
   getCountries,
   changeMode,
@@ -60,4 +70,6 @@ export default {
   getBorderCountries,
   formatInfo,
   getSelectedRegion,
+  resetInfo,
+  getSelectedCountryInfo,
 };

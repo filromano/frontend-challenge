@@ -41,20 +41,11 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
   computed: {
     ...mapState(['selectedCountry', 'borderCountries', 'languages', 'currencies']),
-    ...mapGetters(['isSelectedCountry']),
-  },
-  watch: {
-    isSelectedCountry(value) {
-      if (value) {
-        this.formatInfo();
-        this.getBorderCountries();
-      }
-    },
   },
   methods: {
     ...mapActions(['getSelectedCountry', 'getBorderCountries', 'formatInfo']),

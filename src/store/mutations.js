@@ -35,6 +35,15 @@ const updateBorderCountries = (state, value) => {
   state.borderCountries = value;
 };
 
+const resetStateInfo = (state) => {
+  state.regions = ['Filter by Region'];
+  state.selectedRegion = 'Filter by Region';
+  state.selectedCountry = {};
+  state.borderCountries = [];
+  state.languages = '';
+  state.currencies = '';
+};
+
 export default {
   updateCountries,
   updateRegions,
@@ -44,4 +53,5 @@ export default {
   formatCurrencies,
   formatLanguages,
   updateBorderCountries,
+  resetStateInfo,
 };
