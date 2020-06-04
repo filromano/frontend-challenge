@@ -46,10 +46,15 @@ const formatInfo = ({ commit }) => {
   commit('formatLanguages');
 };
 
+const getSelectedRegion = ({ commit }, value) => {
+  commit('updateSelectedRegion', value);
+};
+
 export default {
   getCountries,
   changeMode,
   getSelectedCountry,
   getBorderCountries,
   formatInfo,
+  getSelectedRegion,
 };

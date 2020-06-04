@@ -3,7 +3,14 @@ const updateCountries = (state, value) => {
 };
 
 const updateRegions = (state, value) => {
-  state.regions = value.filter((item, index) => value.indexOf(item) === index);
+  const regions = value.filter((item, index) => value.indexOf(item) === index);
+  regions.forEach((element) => {
+    state.regions.push(element);
+  });
+};
+
+const updateSelectedRegion = (state, value) => {
+  state.selectedRegion = value;
 };
 
 const updateMode = (state, value) => {
@@ -31,6 +38,7 @@ const updateBorderCountries = (state, value) => {
 export default {
   updateCountries,
   updateRegions,
+  updateSelectedRegion,
   updateMode,
   updateSelectedCountry,
   formatCurrencies,

@@ -1,0 +1,57 @@
+.custom-select {
+  position: relative;
+  width: 300px;
+  text-align: left;
+  outline: none;
+}
+
+.selected {
+  @include boxShadow;
+  background-color: $darkModeTxt;
+  border-radius: 6px;
+  color: $lightModeTxt;
+  padding: 20px 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.selected.open{
+  @include boxShadow;
+}
+
+.selected:after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+.items {
+  color: #ffffff;
+  border-radius: 0px 0px 6px 6px;
+  overflow: hidden;
+  position: absolute;
+  background-color: $darkModeTxt;
+  left: 0;
+  right: 0;
+  margin-top: 10px;
+}
+
+.item{
+  color: $lightModeTxt;
+  padding: 20px 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.item:hover{
+  background-color: $lightModeBackground;
+}
+
+.selectHide {
+  display: none;
+}

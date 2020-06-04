@@ -2,12 +2,12 @@
   <div>
     <div class="filters">
       <div>
-        <input type="text" v-model="search">
+        <input type="text"
+               v-model="search"
+               placeholder="Search for a country...">
       </div>
       <div>
-        <select name="" v-model="selectedRegion" @change="selectRegion(selectedRegion)">
-          <option v-for="region in regions" :key="region">{{ region }}</option>
-        </select>
+        <SelectCustom :options="regions" />
       </div>
     </div>
     <div class="flag-grid">
@@ -28,19 +28,19 @@
 import { mapState } from 'vuex';
 
 import GridItem from './Gridtem.vue';
+import SelectCustom from '../SelectCustom.vue';
 
 export default {
   data() {
     return {
       search: '',
-      selectedRegion: '',
     };
   },
   computed: {
-    ...mapState(['countries', 'regions']),
+    ...mapState(['countries', 'regions', 'selectedRegion']),
     countriesList() {
       let countries = [];
-      if (this.selectedRegion !== '') {
+      if (this.selectedRegion !== 'Filter by Region') {
         countries = this.countries.filter((country) => country.region === this.selectedRegion);
       } else {
         countries = this.countries;
@@ -52,13 +52,9 @@ export default {
         .includes(this.search.toLowerCase()));
     },
   },
-  methods: {
-    selectRegion(value) {
-      console.log(value);
-    },
-  },
   components: {
     GridItem,
+    SelectCustom,
   },
 };
 </script>
