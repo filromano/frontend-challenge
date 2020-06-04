@@ -1,10 +1,11 @@
 <template>
   <div>
     <div class="filters">
-      <div>
+      <div class="search-box">
         <input type="text"
                v-model="search"
                placeholder="Search for a country...">
+               <ion-icon name="search-outline"></ion-icon>
       </div>
       <div>
         <SelectCustom :options="regions" />

@@ -1,5 +1,15 @@
 .back-row{
   margin: 40px 0;
+  position: relative;
+  span{
+    padding-left: 40px;
+  }
+}
+
+ion-icon[name="arrow-back-outline"]{
+  position: absolute;
+  left: 20px;
+  top: 10px;
 }
 
 .details-content{

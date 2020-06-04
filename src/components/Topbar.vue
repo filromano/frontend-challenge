@@ -6,7 +6,8 @@
           <div>
             <h1>Where in the world</h1>
           </div>
-          <div @click="switchMode">
+          <div class="switch-mode" @click="switchMode">
+            <ion-icon name="moon-outline"></ion-icon>
             <p class="mode">Dark Mode</p>
           </div>
         </div>

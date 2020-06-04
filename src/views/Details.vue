@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <div class="back-row">
-      <button @click="goToHome">Back</button>
+      <button @click="goToHome">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <span>Back</span>
+        </button>
     </div>
     <div class="details-content">
       <div class="flag">

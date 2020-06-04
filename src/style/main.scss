@@ -29,6 +29,18 @@
   font-weight: 600;
 }
 
+.search-box{
+  display: block;
+  position: relative;
+}
+
+.switch-mode{
+  display: block;
+  position: relative;
+  padding: 10px 0 0 30px;
+  cursor: pointer;
+}
+
 .flag-grid{
   display: flex;
   flex-wrap: wrap;
