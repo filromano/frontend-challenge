@@ -16,7 +16,11 @@ const routes = [
     path: '/details/:alphaCode2',
     name: 'Details',
     component: Detail,
-    beforeEnter: (to, from, next) => {
+    beforeEnter: async (to, from, next) => {
+      if (store.state.countries.length === 0) {
+        await store.dispatch('getCountries');
+        console.log('ola');
+      }
       store.dispatch('getSelectedCountry', to.params.alphaCode2);
       next();
     },

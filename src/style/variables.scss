@@ -27,3 +27,11 @@ $lightModeBackground: hsl(0, 0%, 98%);
 $homeFontSize: 14px;
 $detailPage: 16px;
 $fontFamily: 'Nunito Sans', sans-serif;
+
+$boxShadow: 0px 0px 20px -10px rgba(77,75,77,1);
+
+@mixin boxShadow {
+  -webkit-box-shadow: $boxShadow;
+  -moz-box-shadow: $boxShadow;
+  box-shadow: $boxShadow;
+}

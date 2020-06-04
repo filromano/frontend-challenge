@@ -1,0 +1,39 @@
+.back-row{
+  margin: 40px 0;
+}
+
+.details-content{
+  display: flex;
+  width: 100%;
+}
+
+.flag{
+  display: block;
+  width: 40%;
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+
+.title-details{
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 0 !important;
+}
+
+.details-txt{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 60%;
+  padding: 40px 100px;
+}
+
+.details-desc{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0 50px;
+  font-size: $detailPage;
+}

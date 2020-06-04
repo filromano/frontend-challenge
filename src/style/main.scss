@@ -1,3 +1,21 @@
+p{
+  margin-bottom: 15px;
+}
+
+button{
+  @include boxShadow;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  font-size: $detailPage;
+  color: $lightModeTxt;
+  cursor: pointer;
+}
+
+.strong{
+  font-weight: 600;
+}
+
 #app{
   display: block;
   width: 100%;
@@ -42,12 +60,11 @@ h1{
 }
 
 .grid-item{
+  @include boxShadow;
   display: block;
   flex-basis: 20%;
   margin: 20px;
-  -webkit-box-shadow: 0px 0px 20px -10px rgba(77,75,77,1);
-  -moz-box-shadow: 0px 0px 20px -10px rgba(77,75,77,1);
-  box-shadow: 0px 0px 20px -10px rgba(77,75,77,1);
+  cursor: pointer;
   &:nth-child(4n+0), &:nth-last-child(n){
     margin-right: 0px !important;
   }
@@ -74,11 +91,5 @@ h1{
     font-size: 20px;
     font-weight: 800;
     margin-bottom: 20px;
-  }
-  p{
-    margin-bottom: 15px;
-  }
-  span{
-    font-weight: 600;
   }
 }
