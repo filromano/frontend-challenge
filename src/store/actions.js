@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const getCountries = ({ commit, dispatch }, value) => {
-  axios
+const getCountries = async ({ commit }) => {
+  await axios
     .get('https://restcountries.eu/rest/v2/all')
     .then((response) => {
       commit('updateCountries', response.data);
@@ -10,9 +10,6 @@ const getCountries = ({ commit, dispatch }, value) => {
         regions.push(country.region);
       });
       commit('updateRegions', regions);
-      if (value) {
-        dispatch('getSelectedCountryInfo', value);
-      }
     });
 };
 

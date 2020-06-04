@@ -19,8 +19,6 @@ const routes = [
     beforeEnter: async (to, from, next) => {
       if (store.state.countries.length === 0) {
         await store.dispatch('getCountries', to.params.alphaCode2);
-      } else {
-        store.dispatch('getSelectedCountryInfo', to.params.alphaCode2);
       }
       next();
     },

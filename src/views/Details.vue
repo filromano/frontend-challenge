@@ -48,15 +48,16 @@ export default {
     ...mapState(['selectedCountry', 'borderCountries', 'languages', 'currencies']),
   },
   methods: {
-    ...mapActions(['getSelectedCountry', 'getBorderCountries', 'formatInfo']),
+    ...mapActions(['getSelectedCountryInfo']),
     async updateCountry(country) {
-      await this.getSelectedCountry(country);
-      this.formatInfo();
-      this.getBorderCountries();
+      this.getSelectedCountryInfo(country);
     },
     goToHome() {
       this.$router.push({ name: 'Home' });
     },
+  },
+  mounted() {
+    this.getSelectedCountryInfo(this.$route.params.alphaCode2);
   },
 };
 </script>
