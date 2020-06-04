@@ -21,7 +21,7 @@ const routes = [
         await store.dispatch('getCountries', to.params.alphaCode2);
         console.log('ola');
       } else {
-        store.dispatch('getSelectedCountry', to.params.alphaCode2);
+        await store.dispatch('getSelectedCountry', to.params.alphaCode2);
       }
       next();
     },
