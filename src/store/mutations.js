@@ -2,6 +2,10 @@ const updateCountries = (state, value) => {
   state.countries = value;
 };
 
+const updateRegions = (state, value) => {
+  state.regions = value.filter((item, index) => value.indexOf(item) === index);
+};
+
 const updateMode = (state, value) => {
   state.darkMode = value;
 };
@@ -26,6 +30,7 @@ const updateBorderCountries = (state, value) => {
 
 export default {
   updateCountries,
+  updateRegions,
   updateMode,
   updateSelectedCountry,
   formatCurrencies,

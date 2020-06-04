@@ -12,6 +12,12 @@ button{
   cursor: pointer;
 }
 
+input{
+  padding: 10px;
+  width: 450px;
+  max-width: 100%;
+}
+
 .strong{
   font-weight: 600;
 }
@@ -92,4 +98,10 @@ h1{
     font-weight: 800;
     margin-bottom: 20px;
   }
+}
+
+.filters{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
 }

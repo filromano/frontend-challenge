@@ -5,6 +5,11 @@ const getCountries = ({ commit }) => {
     .get('https://restcountries.eu/rest/v2/all')
     .then((response) => {
       commit('updateCountries', response.data);
+      const regions = [];
+      response.data.forEach((country) => {
+        regions.push(country.region);
+      });
+      commit('updateRegions', regions);
     });
 };
 
