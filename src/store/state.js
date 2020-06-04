@@ -2,7 +2,7 @@ export default {
   darkMode: false,
   countries: [],
   regions: ['Filter by Region'],
-  selectedRegion: '',
+  selectedRegion: 'Filter by Region',
   selectedCountry: {},
   borderCountries: [],
   languages: '',

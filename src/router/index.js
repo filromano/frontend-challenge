@@ -18,10 +18,11 @@ const routes = [
     component: Detail,
     beforeEnter: async (to, from, next) => {
       if (store.state.countries.length === 0) {
-        await store.dispatch('getCountries');
+        await store.dispatch('getCountries', to.params.alphaCode2);
         console.log('ola');
+      } else {
+        store.dispatch('getSelectedCountry', to.params.alphaCode2);
       }
-      store.dispatch('getSelectedCountry', to.params.alphaCode2);
       next();
     },
   },
