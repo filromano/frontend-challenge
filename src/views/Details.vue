@@ -15,7 +15,9 @@
         <div class="details-desc">
           <div>
             <p><span class="strong">Native Name: </span>{{ selectedCountry.nativeName }}</p>
-            <p><span class="strong">Population: </span>{{ selectedCountry.population }}</p>
+            <p><span class="strong">Population: </span>
+              {{ selectedCountry.population | populationThousands}}
+            </p>
             <p><span class="strong">Region: </span>{{ selectedCountry.region }}</p>
             <p><span class="strong">Sub Region: </span>{{ selectedCountry.subregion }}</p>
             <p><span class="strong">Capital: </span>{{ selectedCountry.capital }}</p>
@@ -61,9 +63,6 @@ export default {
       this.getSelectedRegion('Filter by Region');
       this.$router.push({ name: 'Home' });
     },
-  },
-  mounted() {
-    this.getSelectedCountryInfo(this.$route.params.alphaCode2);
   },
 };
 </script>

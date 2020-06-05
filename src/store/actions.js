@@ -47,7 +47,6 @@ const formatInfo = ({ commit }) => {
   commit('formatCurrencies');
   commit('formatLanguages');
   commit('formatTopLevelDomains');
-  commit('formatPopulation');
 };
 
 const getSelectedRegion = ({ commit }, value) => {

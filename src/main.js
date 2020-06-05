@@ -6,6 +6,8 @@ import store from './store';
 Vue.config.productionTip = false;
 Vue.config.ignoredElements = [/^ion-/];
 
+Vue.filter('populationThousands', (value) => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+
 new Vue({
   router,
   store,

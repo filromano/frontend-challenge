@@ -5,7 +5,7 @@
     </div>
     <div class="grid-item-desc">
       <p class="title">{{ name }}</p>
-      <p><span class="strong">Population:</span> {{ population }}</p>
+      <p><span class="strong">Population:</span> {{ population | populationThousands }}</p>
       <p><span class="strong">Region:</span> {{ region }}</p>
       <p><span class="strong">Capital:</span> {{ capital }}</p>
     </div>

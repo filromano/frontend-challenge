@@ -20,8 +20,9 @@ const routes = [
       // When it tries to go direct to the details of a caountry check
       // if countries is already filled, if not get the countries from the API
       if (store.state.countries.length === 0) {
-        await store.dispatch('getCountries', to.params.alphaCode2);
+        await store.dispatch('getCountries');
       }
+      store.dispatch('getSelectedCountryInfo', to.params.alphaCode2);
       next();
     },
   },
