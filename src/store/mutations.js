@@ -36,6 +36,10 @@ const formatTopLevelDomains = (state) => {
   state.topLevelDomains = domains.join(', ');
 };
 
+const formatPopulation = (state) => {
+  state.selectedCountry.population = state.selectedCountry.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+};
+
 const updateBorderCountries = (state, value) => {
   state.borderCountries = value;
 };
@@ -49,5 +53,6 @@ export default {
   formatCurrencies,
   formatLanguages,
   formatTopLevelDomains,
+  formatPopulation,
   updateBorderCountries,
 };
