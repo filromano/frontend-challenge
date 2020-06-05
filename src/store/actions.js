@@ -1,15 +1,17 @@
 import axios from 'axios';
 
-const getCountries = async ({ commit }) => {
+const getCountries = async ({ state, commit }) => {
   await axios
     .get('https://restcountries.eu/rest/v2/all')
     .then((response) => {
       commit('updateCountries', response.data);
-      const regions = [];
-      response.data.forEach((country) => {
-        regions.push(country.region);
-      });
-      commit('updateRegions', regions);
+      if (state.regions.length === 1) {
+        const regions = [];
+        response.data.forEach((country) => {
+          regions.push(country.region);
+        });
+        commit('updateRegions', regions);
+      }
     });
 };
 
