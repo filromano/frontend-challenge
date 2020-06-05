@@ -46,6 +46,7 @@ const getBorderCountries = ({ commit, state }) => {
 const formatInfo = ({ commit }) => {
   commit('formatCurrencies');
   commit('formatLanguages');
+  commit('formatTopLevelDomains');
 };
 
 const getSelectedRegion = ({ commit }, value) => {

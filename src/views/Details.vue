@@ -17,11 +17,11 @@
             <p><span class="strong">Native Name: </span>{{ selectedCountry.nativeName }}</p>
             <p><span class="strong">Population: </span>{{ selectedCountry.population }}</p>
             <p><span class="strong">Region: </span>{{ selectedCountry.region }}</p>
-            <p><span class="strong">Sub Region: </span>{{ selectedCountry.capital }}</p>
+            <p><span class="strong">Sub Region: </span>{{ selectedCountry.subregion }}</p>
             <p><span class="strong">Capital: </span>{{ selectedCountry.capital }}</p>
           </div>
           <div>
-            <p><span class="strong">Top Level Domain: </span>{{ selectedCountry.capital }}</p>
+            <p><span class="strong">Top Level Domain: </span>{{ topLevelDomains }}</p>
             <p><span class="strong">Currencies: </span>{{ currencies }}</p>
             <p><span class="strong">Languages: </span>{{ languages }}</p>
           </div>
@@ -45,7 +45,7 @@ import { mapState, mapActions } from 'vuex';
 
 export default {
   computed: {
-    ...mapState(['selectedCountry', 'borderCountries', 'languages', 'currencies']),
+    ...mapState(['selectedCountry', 'borderCountries', 'languages', 'currencies', 'topLevelDomains']),
   },
   methods: {
     ...mapActions(['getSelectedCountryInfo']),

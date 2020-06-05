@@ -7,4 +7,5 @@ export default {
   borderCountries: [],
   languages: '',
   currencies: '',
+  topLevelDomains: '',
 };

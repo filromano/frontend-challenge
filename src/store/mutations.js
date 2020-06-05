@@ -31,6 +31,11 @@ const formatLanguages = (state) => {
   state.languages = languages.join(', ');
 };
 
+const formatTopLevelDomains = (state) => {
+  const domains = state.selectedCountry.topLevelDomain.filter((el) => el);
+  state.topLevelDomains = domains.join(', ');
+};
+
 const updateBorderCountries = (state, value) => {
   state.borderCountries = value;
 };
@@ -52,6 +57,7 @@ export default {
   updateSelectedCountry,
   formatCurrencies,
   formatLanguages,
+  formatTopLevelDomains,
   updateBorderCountries,
   resetStateInfo,
 };
