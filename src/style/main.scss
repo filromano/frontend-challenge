@@ -1,7 +1,7 @@
 #app{
   display: block;
   width: 100%;
-  height: auto;
+  min-height: 100%;
   font-family: $fontFamily;
 }
 
@@ -10,9 +10,14 @@
   box-sizing: border-box;
   margin: auto;
   width: 100%;
+  height: 100%;
   max-width: $breakpointDesktop;
   height: auto;
   padding: 0 40px;
+}
+
+.content-wrapper{
+  background-color: $darkModeTxt;
 }
 
 .topbar{

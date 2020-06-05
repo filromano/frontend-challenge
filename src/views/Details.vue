@@ -2,7 +2,7 @@
   <div class="container">
     <div class="back-row">
       <button @click="goToHome">
-        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-icon name="arrow-back"></ion-icon>
         <span>Back</span>
         </button>
     </div>

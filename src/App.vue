@@ -1,9 +1,7 @@
 <template>
-  <div id="app">
-    <div id="mode" :class="[darkMode ? 'dark-mode' : 'light-mode']">
-      <Topbar/>
-      <router-view/>
-    </div>
+  <div id="app" :class="[darkMode ? 'dark-mode' : 'light-mode']">
+    <Topbar/>
+    <router-view/>
   </div>
 </template>
 
