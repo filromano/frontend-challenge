@@ -53,9 +53,6 @@ const getSelectedRegion = ({ commit }, value) => {
   commit('updateSelectedRegion', value);
 };
 
-const resetInfo = ({ commit }) => {
-  commit('resetStateInfo');
-};
 
 const getSelectedCountryInfo = async ({ dispatch }, value) => {
   await dispatch('getSelectedCountry', value);
@@ -70,6 +67,5 @@ export default {
   getBorderCountries,
   formatInfo,
   getSelectedRegion,
-  resetInfo,
   getSelectedCountryInfo,
 };

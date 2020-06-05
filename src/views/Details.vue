@@ -28,8 +28,10 @@
         </div>
         <div class="border-countries">
           <div class="border-country">
-            <p class="strong">Border Countries: </p>
-            <div>
+            <div class="border-country-txt">
+              <p class="strong">Border Countries: </p>
+            </div>
+            <div class="border-country-buttons">
               <button v-for="borderCountry in borderCountries"
                     :key="borderCountry.index"
                     @click="updateCountry(borderCountry.alpha2Code)">
@@ -50,11 +52,13 @@ export default {
     ...mapState(['selectedCountry', 'borderCountries', 'languages', 'currencies', 'topLevelDomains']),
   },
   methods: {
-    ...mapActions(['getSelectedCountryInfo']),
+    ...mapActions(['getSelectedCountryInfo', 'getSelectedRegion']),
     async updateCountry(country) {
       this.getSelectedCountryInfo(country);
     },
     goToHome() {
+      // Reset filter by Region to first value
+      this.getSelectedRegion('Filter by Region');
       this.$router.push({ name: 'Home' });
     },
   },
