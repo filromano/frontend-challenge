@@ -1,0 +1,9 @@
+@mixin boxShadow {
+  -webkit-box-shadow: $boxShadow;
+  -moz-box-shadow: $boxShadow;
+  box-shadow: $boxShadow;
+}
+
+@mixin desktopBreakpoint {
+  @media (min-width: $breakpointMobile){ @content}
+};

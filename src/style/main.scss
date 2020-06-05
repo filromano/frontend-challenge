@@ -48,9 +48,13 @@
 
 .flag-grid{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
+  @include desktopBreakpoint{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .grid-item{
@@ -90,6 +94,11 @@
 
 .filters{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 50px 0;
+  margin: 30px 0 10px;
+  @include desktopBreakpoint{
+    flex-direction: row;
+    margin: 50px 0;
+  }
 }

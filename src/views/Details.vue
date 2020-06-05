@@ -27,13 +27,15 @@
           </div>
         </div>
         <div class="border-countries">
-          <p>
-            <span class="strong">Border Countries: </span>
-            <button v-for="borderCountry in borderCountries"
+          <div class="border-country">
+            <p class="strong">Border Countries: </p>
+            <div>
+              <button v-for="borderCountry in borderCountries"
                     :key="borderCountry.index"
                     @click="updateCountry(borderCountry.alpha2Code)">
                     {{ borderCountry.name }}</button>
-          </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

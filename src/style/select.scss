@@ -1,8 +1,11 @@
 .custom-select {
   position: relative;
-  width: 300px;
   text-align: left;
+  width: 80%;
   outline: none;
+  @include desktopBreakpoint {
+    width: 300px;
+  }
 }
 
 .selected {

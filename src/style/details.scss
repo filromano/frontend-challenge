@@ -14,15 +14,22 @@ ion-icon[name="arrow-back"]{
 
 .details-content{
   display: flex;
+  flex-direction: column;
   width: 100%;
+  @include desktopBreakpoint{
+    flex-direction: row;
+  }
 }
 
 .flag{
   display: block;
-  width: 40%;
+  width: 100%;
   img{
     display: block;
     width: 100%;
+  }
+  @include desktopBreakpoint {
+    width: 40%;
   }
 }
 
@@ -36,14 +43,40 @@ ion-icon[name="arrow-back"]{
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 60%;
-  padding: 40px 100px;
+  width: 100%;
+  padding: 40px 0;
+  @include desktopBreakpoint{
+    width: 60%;
+    padding-left: 100px;;
+  }
 }
 
 .details-desc{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin: 30px 0 50px;
   font-size: $detailPage;
+  @include desktopBreakpoint {
+    flex-direction: row;
+  }
+}
+
+.border-country{
+  display: flex;
+  flex-direction: column;
+  div{
+    display: flex;
+    flex-wrap: wrap;
+    button{
+      margin: 0 0 8px 8px;
+    }
+  }
+  @include desktopBreakpoint{
+    flex-direction: row;
+    p{
+      flex-basis: 380px;
+      padding-top: 20px;
+    }
+  }
 }
