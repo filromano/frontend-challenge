@@ -61,13 +61,16 @@
   @include boxShadow;
   display: block;
   flex-basis: 20%;
-  margin: 20px;
   cursor: pointer;
-  &:nth-child(4n+0), &:nth-last-child(n){
-    margin-right: 0px !important;
-  }
-  &:nth-child(4n+1){
-    margin-left: 0 !important;
+  margin-top: 20px;
+  @include desktopBreakpoint{
+    margin: 20px;
+    &:nth-child(4n+0), &:nth-last-child(n){
+      margin-right: 0px !important;
+    }
+    &:nth-child(4n+1){
+      margin-left: 0 !important;
+    }
   }
 }
 
